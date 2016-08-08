@@ -6,9 +6,9 @@
     <button ng-if='vm.valid' class='cute' ng-click='vm.vote(vm.dog._id, "cute")'>Cute</button>
     <h3 ng-if='vm.valid' >- Or -</h3>
     <button ng-if='vm.valid' class='not' ng-click='vm.vote(vm.dog._id, "not")'>Not</button>
-    <div class='column'>
-      <h3 ng-if='!vm.valid'>- That's all folks! -</h3>
-      <p ng-if='!vm.valid' >I hope you enjoyed this game!</p>
+    <div class='column' ng-if='!vm.valid'>
+      <h3>- That's all folks! -</h3>
+      <p>I hope you enjoyed this game!</p>
     </div>
   </div>
 </div>
