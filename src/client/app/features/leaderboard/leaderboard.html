@@ -1,9 +1,9 @@
 <div class='grid'>
   <div class='title flex-12 no-padding-bottom no-margin-bottom'>
-    <h2>Leaderboard</h2>
+    <h2><span>Leaderboard for <span class='state' ng-click='vm.changeOrderBy()'>{{ vm.orderByState }}</span></span></h2>
   </div>
   <div class='leaderboard'>
-    <div class='flex-2 column' ng-repeat='dog in vm.results'>
+    <div class='flex-2 column' ng-repeat='dog in vm.results | orderBy:vm.orderBy'>
       <div class='board' style='background-size: cover; background-position: center; background-image: url("../../assets/images/{{ dog.image }}.jpg")'>
       </div>
       <div class='information'>

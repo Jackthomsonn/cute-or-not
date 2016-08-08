@@ -2,7 +2,7 @@
 
 (function() {
   angular
-    .module('app.components')
+    .module('app.cutenav', [])
     .directive('cuteNav', cuteNav);
 
   function cuteNav() {

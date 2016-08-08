@@ -9,18 +9,19 @@
     app = express(),
     port = process.env.PORT || 5000;
 
-  mongoURI = 'localhost';
-  mongoose.connect('mongodb://'+mongoURI+'/cute_or_not/');
-
   switch(process.env.NODE_ENV) {
 
   case 'development':
+    mongoURI = 'localhost';
     app.use(express.static('dist'));
     break;
   case 'production':
+    mongoURI = process.env.MONGODB_URI;
     app.use(express.static(__dirname));
     break;
   }
+
+  mongoose.connect('mongodb://'+mongoURI+'/cute_or_not/');
 
   console.log('App is running on port ' + port + ' in ' + process.env.NODE_ENV + ' mode');
 

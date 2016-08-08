@@ -117,14 +117,14 @@ li {
   .am-left-stroke:hover:after {
     content: '';
     display: block;
-    background: #2EC4B6;
+    background: #FF6B6B;
     height: 1px;
     float: left;
     animation: widthAnim 400ms cubic-bezier(0.385, 0.855, 0.5, 0.995) forwards; }
   .am-right-stroke:hover:after {
     content: '';
     display: block;
-    background: #2EC4B6;
+    background: #FF6B6B;
     height: 1px;
     float: right;
     animation: widthAnim 400ms cubic-bezier(0.385, 0.855, 0.5, 0.995) forwards; }
@@ -134,7 +134,7 @@ li {
     position: absolute;
     left: 0;
     right: 0;
-    background: #2EC4B6;
+    background: #FF6B6B;
     height: 1px;
     animation: widthAnim 400ms cubic-bezier(0.385, 0.855, 0.5, 0.995) forwards; }
   .am-double-stroke:hover:after {
@@ -143,7 +143,7 @@ li {
     position: absolute;
     left: 0;
     right: 0;
-    background: #2EC4B6;
+    background: #FF6B6B;
     height: 1px;
     animation: widthAnim 400ms cubic-bezier(0.385, 0.855, 0.5, 0.995) forwards; }
   .am-fancy-stroke:hover:before {
@@ -151,7 +151,7 @@ li {
     display: block;
     position: absolute;
     right: 0;
-    background: #2EC4B6;
+    background: #FF6B6B;
     height: 1px;
     animation: widthAnim 400ms cubic-bezier(0.385, 0.855, 0.5, 0.995) forwards; }
   .am-fancy-stroke:hover:after {
@@ -160,13 +160,13 @@ li {
     position: absolute;
     left: 0;
     right: 0;
-    background: #2EC4B6;
+    background: #FF6B6B;
     height: 1px;
     animation: widthAnim 400ms cubic-bezier(0.385, 0.855, 0.5, 0.995) forwards; }
   .am-scale-stroke:hover:after {
     content: '';
     display: block;
-    background: #2EC4B6;
+    background: #FF6B6B;
     height: 1px;
     animation: bounceIn 400ms cubic-bezier(0.385, 0.855, 0.5, 0.995) forwards; }
 
@@ -376,8 +376,7 @@ li {
   box-sizing: border-box;
   color: #59697a;
   font-family: "muli", sans-serif;
-  outline: none;
-  transition: all ease-in-out .5s; }
+  outline: none; }
 
 html, body {
   background: #F0F2F5;
@@ -482,10 +481,14 @@ header {
 
 .title h2 {
   display: flex;
-  align-items: center;
   font-size: 1em;
   border-bottom: 1px solid #e1e5eb;
   width: 100%; }
+  .title h2 span.state {
+    cursor: pointer;
+    background: #e1e5eb;
+    padding: .5em;
+    border-radius: 5px; }
 
 .no-margin-bottom {
   margin-bottom: 0; }
@@ -521,12 +524,15 @@ cute-nav {
     justify-content: center;
     left: 0;
     position: absolute; }
-    cute-nav .nav li {
-      font-weight: 700;
-      font-size: 2em;
-      cursor: pointer;
-      margin: 1.5em 0;
-      text-align: center; }
+    cute-nav .nav ul {
+      display: flex;
+      flex-flow: column wrap; }
+      cute-nav .nav ul li {
+        font-weight: 700;
+        font-size: 1.5em;
+        cursor: pointer;
+        margin: 1.5em 0;
+        text-align: center; }
 
 @keyframes spin {
   100% {

@@ -1,7 +1,7 @@
 'use strict';
 (function() {
   angular
-    .module('app.animalservice')
+    .module('app.animals')
     .factory('animalService', animalService);
 
   animalService.$inject = ['$resource'];

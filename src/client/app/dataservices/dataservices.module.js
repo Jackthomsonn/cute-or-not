@@ -2,6 +2,6 @@
 (function() {
   angular
     .module('app.dataservices', [
-      'app.animalservice'
+      'app.animals'
     ]);
 })();

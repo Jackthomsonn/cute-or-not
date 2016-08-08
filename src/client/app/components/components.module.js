@@ -1,5 +1,7 @@
 'use strict';
 (function() {
   angular
-    .module('app.components', []);
+    .module('app.components', [
+      'app.cutenav'
+    ]);
 })();
