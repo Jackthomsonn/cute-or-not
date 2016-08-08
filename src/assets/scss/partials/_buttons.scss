@@ -1,0 +1,28 @@
+
+// Button Styles
+
+  // Default Button Styles
+  .btn {
+    background: none;
+    border-radius: 10em;
+    padding: .7em 1.2em;
+    margin: 1em 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.85;
+    }
+    &-small {
+      width: auto;
+      @include font-size(14);
+    }
+    &-medium {
+      width: auto;
+      @include font-size(18);
+    }
+    &-large {
+      width: auto;
+      @include font-size(24);
+    }
+  }

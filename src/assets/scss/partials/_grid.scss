@@ -1,0 +1,68 @@
+
+// Hero Styles
+
+  // Set Hero Styles
+  .hero {
+    margin: 0 auto;
+    height: auto;
+    padding: 1em 0;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+// Grid Styles
+
+  // Set Grid Styles And Activate Flexbox
+  .grid {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+// Container Styles
+
+  // Set Container Width
+  .container {
+    width: $container;
+    margin: 0 auto;
+  }
+
+// Image Styles
+
+  // Flexy (Responsive) Images
+  .flexy-img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important;
+  }
+
+// Flex Item Styles
+
+  // Flex Item Styles
+  [class*="flex"] {
+    padding: 1em;
+    margin: $spacing / 2;
+    color: #FFF;
+    flex: auto;
+  }
+
+  // Start Our Loop For Our Flex Items
+  @for $i from 1 through 12 {
+    .flex-#{$i} {
+      flex: 0 0 $row-width / $columns * $i - $spacing;
+      min-width: $row-width / $columns * $i - $spacing;
+      display: flex;
+      @include respond-to(small) {
+        flex: 0 0 100% - $spacing;
+      }
+      @include respond-to(medium) {
+        flex: 0 0 50% - $spacing;
+      }
+      @include respond-to(large) {
+        flex: 0 0 25% - $spacing;
+      }
+    }
+  }

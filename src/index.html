@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='app'>
+  <head>
+    <!-- Default Meta Content -->
+    <meta content='Description' name='description'>
+    <meta content='Keywords' name='keywords'>
+    <meta content='Jack Thomson' name='author'>
+    <meta content='width=device-width, initial-scale=1, user-scalable=no' name='viewport'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='black' name='apple-mobile-web-app-status-bar-style'>
+    <!-- Material Icons -->
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <!-- Global Stylesheet -->
+    <link href='assets/css/global.css' rel='stylesheet' type='text/css'>
+    <title>Cute Or Not</title>
+    <body>
+      <div class='spinner_container' ng-if='loading'>
+        <div class='spinner_container__spinner'></div>
+      </div>
+      <header>
+        <cute-nav></cute-nav>
+        <strong>Cute Or Not</strong>
+        <a href='http://jackthomson.co.uk' target='_blank'><i class="material-icons">link</i></a>
+      </header>
+      <div ui-view></div>
+      <footer>
+        <p> A game by <strong>Jack Thomson</strong> written in the MEAN stack</p>
+      </footer>
+      <script src="assets/vendors/angular.js"></script>
+      <script src="assets/vendors/angular-ui-router.js"></script>
+      <script src="assets/vendors/angular-animate.js"></script>
+      <script src="assets/vendors/angular-resource.js"></script>
+      <script src="client/app/app.js"></script>
+    </body>
+  </head>
+</html>

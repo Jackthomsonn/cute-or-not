@@ -1,0 +1,46 @@
+
+// Typography Styles
+
+  // Set Styles For Base Typography Elements
+  h1 {
+    @include font-size(40);
+  }
+
+  h2 {
+    @include font-size(30);
+  }
+
+  h3 {
+    @include font-size(15);
+  }
+
+  h4 {
+    @include font-size(15);
+  }
+
+  p {
+    @include font-size(14);
+  }
+
+  a {
+    text-decoration: none;
+    @include font-size(14);
+  }
+
+  strong {
+    font-weight: 400;
+    @include font-size(14);
+  }
+
+  button {
+    @include font-size(10);
+  }
+
+  em {
+    @include font-size(10);
+  }
+
+  li {
+    list-style: none;
+    @include font-size(14);
+  }

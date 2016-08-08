@@ -1,0 +1,231 @@
+
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One|Luckiest+Guy|Muli:400,300|pacifico);
+
+@import "modules/_mixins.scss";
+
+@import "partials/_palettes.scss";
+
+@import "modules/_variables.scss";
+
+@import "partials/_typography.scss";
+
+@import "partials/_buttons.scss";
+
+@import "partials/_animMe.scss";
+
+@import "modules/_functions.scss";
+
+@import "partials/_grid.scss";
+
+// Base Styles
+
+  // Simple Reset
+  *,
+  *:before,
+  *:after {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: lighten($shark, 20%);
+    font-family: $font-stack;
+    outline: none;
+    transition: all ease-in-out .5s;
+  }
+
+  // Default Styles
+  html,body {
+    background: $mystic;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-size-adjust: 100%;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+  }
+
+  // Header Styles
+  header {
+    background: #FFF;
+    box-shadow: 0 14px 28px darken($mystic, 3%), 0 10px 10px darken($mystic, 3%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4em;
+  }
+
+  // Rating View
+  .rating {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 100vh;
+    @include respond-to(medium) {
+      align-items: center;
+    }
+    &_view {
+      height: 25em;
+      width: 100%;
+      box-shadow: 0 14px 28px darken($mystic, 7%), 0 10px 10px darken($mystic, 7%);
+      @include respond-to(medium) {
+        width: 60%;
+      }
+    }
+    &_actions {
+      display: flex;
+      align-items: center;
+      flex-flow: column wrap;
+      width: 60%;
+      margin-top: -50px;
+      @include respond-to(medium) {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: -150px;
+      }
+      button {
+        border: none;
+        outline: none;
+        padding: 1em;
+        color: #FFF;
+        font-weight: 700;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        width: 80%;
+        cursor: pointer;
+        margin: 1em 0;
+        box-shadow: 0 14px 28px darken($mystic, 7%), 0 10px 10px darken($mystic, 7%);
+        @include respond-to(medium) {
+          margin: 0;
+          width: 35%;
+        }
+        &.cute {
+          background: $bittersweet;
+        }
+        &.not {
+          background: $outer-space;
+        }
+      }
+      h3 {
+        font-family: 'Pacifico', cursive;
+        font-size: 1.7em;
+      }
+      p {
+        margin-top: 1.5em;
+        text-align: center;
+      }
+    }
+  }
+
+  // Leaderboard
+  .leaderboard {
+    flex-flow: row wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .board {
+      width: 100%;
+      height: 15em;
+      box-shadow: 0 14px 28px darken($mystic, 7%), 0 10px 10px darken($mystic, 7%);
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .information {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      width: 100%;
+      padding: 1em 0;
+    }
+    i {
+      font-size: 1em;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap;
+      p, i {
+        margin: 0 .2em;
+      }
+    }
+  }
+
+  .title {
+    h2 {
+      display: flex;
+      align-items: center;
+      font-size: 1em;
+      border-bottom: 1px solid darken($mystic, 5%);
+      width: 100%;
+    }
+  }
+
+  // Overwrite Styles
+  .no-margin-bottom {
+    margin-bottom: 0;
+  }
+  .no-padding-bottom {
+    padding-bottom: 0;
+  }
+
+  // Spinner
+  .spinner_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    &__spinner {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      border-top: 1px solid $shark;
+      border-left: 1px solid $shark;
+      -webkit-animation: spin 2s linear infinite;
+    }
+  }
+
+  // Navigation
+  cute-nav {
+    cursor: pointer;
+    .nav {
+      background: rgba(255, 255, 255, 0.8);
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      li {
+        font-weight: 700;
+        font-size: 2em;
+        cursor: pointer;
+        margin: 1.5em 0;
+        text-align: center;
+      }
+    }
+  }
+
+  // Animations
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  // Footer
+  footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    p {
+      text-align: center;
+    }
+  }

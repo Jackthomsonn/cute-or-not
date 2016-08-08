@@ -1,0 +1,11 @@
+
+// Functions
+
+  // Dynamic Text Color
+  @function text-color($color) {
+    @if (lightness($color) > 70) {
+      @return rgba(25, 25, 25, 0.5);
+      } @else {
+        @return rgba(255, 255, 255, 1);
+      }
+    }

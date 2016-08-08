@@ -1,0 +1,34 @@
+
+// Variables
+
+  // Row And Column Variables
+  $row-width: 100%;
+  $columns: 12;
+  $spacing: 1%;
+
+  // Container Variables
+  $container: 95%;
+
+  // Aside Variables
+  $aside-width: 5.5em;
+  $aside-height: 100%;
+  $logo-height: 4.45em;
+  $logo-line-height: $logo-height + .2em;
+
+  // Base Variables
+  $font-stack: 'muli', sans-serif;
+  $font-size: 100%;
+  $font-weight: 300;
+  $easing: all ease-in-out .2s;
+  $box-shadow: 0 10px 75px -16px darken(rgba(203, 210, 221, 1), 5%);
+  $radius: 100%;
+
+  // Breakpoint Variables
+  $small: 0px;
+  $medium: 900px;
+  $large: 1100px;
+
+  // Anim Me Variables
+  $anim-color: $tree-poppy;
+  $height: 1px;
+  $time: 400;

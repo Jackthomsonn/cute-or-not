@@ -1,0 +1,14 @@
+<div class='grid'>
+  <div class='title flex-12 no-padding-bottom no-margin-bottom'>
+    <h2>Leaderboard</h2>
+  </div>
+  <div class='leaderboard'>
+    <div class='flex-2 column' ng-repeat='dog in vm.results'>
+      <div class='board' style='background-size: cover; background-position: center; background-image: url("../../assets/images/{{ dog.image }}.jpg")'>
+      </div>
+      <div class='information'>
+        <span><i class='material-icons'>thumb_up </i> <p>{{ dog.cute }}</p></span> <span><i class='material-icons'>thumb_down </i><p>{{ dog.not }}</p></span>
+      </div>
+    </div>
+  </div>
+</div>
