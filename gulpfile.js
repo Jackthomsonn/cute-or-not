@@ -13,12 +13,12 @@
   // Gulp Tasks
 
   // Set development node env
-  gulp.task('set-dev-node-env', function() {
+  gulp.task('set-dev-node-env', () => {
     return process.env.NODE_ENV = 'development';
   });
 
   // Set production node env
-  gulp.task('set-prod-node-env', function() {
+  gulp.task('set-prod-node-env', () => {
     return process.env.NODE_ENV = 'production';
   });
 
